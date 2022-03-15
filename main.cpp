@@ -1,16 +1,22 @@
 #include <iostream>
 
-int fib(int value){
-    if (0 == value || 1 == value) return value;     
-    else return fib(value - 1) + fib(value - 2);		
+void fib(int n){
+    int temp = 0, temp1 = 1, temp2 = 0;
+    for (int i = 0; i < n; ++i){
+        std::cout << temp2 << std::endl;
+        temp = temp2;
+        temp2 = temp1 + temp2;
+        temp1 = temp;
+    }
 }
+
 int main(){
 
     std::cout<< "Hello World!" << std::endl;
     
     int n;
     std::cin >> n;
-    std::cout << fib(n-1) << std::endl;
+    fib(n);
 
     return 0;
 }
