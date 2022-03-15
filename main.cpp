@@ -1,7 +1,7 @@
 #include <iostream>
 
 int fib(int value){
-    if (0 == value || 1 == value) return 1;     
+    if (0 == value || 1 == value) return value;     
     else return fib(value - 1) + fib(value - 2);		
 }
 int main(){
